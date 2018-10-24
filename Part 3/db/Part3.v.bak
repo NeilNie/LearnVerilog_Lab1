@@ -1,0 +1,11 @@
+// Lab Part 3
+
+module Part3(
+	
+	SW,
+	LEDR
+
+);
+
+input [9:0] SW;
+output [1:0] LEDR;

@@ -1,0 +1,36 @@
+// Lab Part 3
+
+module Part3(
+	
+	SW,
+	LEDR
+
+);
+
+input [9:0] SW;
+output [1:0] LEDR;
+
+wire U;
+wire V;
+wire W;
+wire X;
+wire out;
+wire sel_1;
+wire sel_2;
+wire buffer_1;
+wire buffer_2;
+
+assign U = SW[1:0];
+assign V = SW[3:2];
+assign W = SW[5:4];
+assign X = SW[7:6];
+assign sel_1 = SW[8];
+assign sel_2 = SW[9];
+
+assign buffer_1 = (~sel_1 & U) | (sel_1 & V);
+assign buffer_2 = (~sel_1 & W) | (sel_1 & X);
+
+assign LEDR = (~sel_2 & buffer_1) | (sel_2 & buffer_2);
+
+
+endmodule
