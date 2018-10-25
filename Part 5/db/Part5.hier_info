@@ -1,0 +1,205 @@
+|Part5
+SW[0] => SW[0].IN4
+SW[1] => SW[1].IN4
+SW[2] => SW[2].IN4
+SW[3] => SW[3].IN4
+SW[4] => SW[4].IN4
+SW[5] => SW[5].IN4
+SW[6] => SW[6].IN4
+SW[7] => SW[7].IN4
+SW[8] => SW[8].IN4
+SW[9] => SW[9].IN4
+HEX0[6] <= <GND>
+HEX0[5] <= <GND>
+HEX0[4] <= <GND>
+HEX0[3] <= <GND>
+HEX0[2] <= <GND>
+HEX0[1] <= <GND>
+HEX0[0] <= <GND>
+HEX1[6] <= display:comb_8.port1
+HEX1[5] <= <GND>
+HEX1[4] <= <GND>
+HEX1[3] <= <GND>
+HEX1[2] <= <GND>
+HEX1[1] <= <GND>
+HEX1[0] <= <GND>
+HEX2[6] <= display:comb_9.port1
+HEX2[5] <= <GND>
+HEX2[4] <= <GND>
+HEX2[3] <= <GND>
+HEX2[2] <= <GND>
+HEX2[1] <= <GND>
+HEX2[0] <= <GND>
+HEX3[6] <= display:comb_10.port1
+HEX3[5] <= <GND>
+HEX3[4] <= <GND>
+HEX3[3] <= <GND>
+HEX3[2] <= <GND>
+HEX3[1] <= <GND>
+HEX3[0] <= <GND>
+
+
+|Part5|two_bit_4to1_mux:comb_3
+in0[0] => buffer_1.IN0
+in0[1] => buffer_1.IN0
+in1[0] => buffer_1.IN0
+in1[1] => buffer_1.IN0
+in2[0] => buffer_2.IN0
+in2[1] => buffer_2.IN0
+in3[0] => buffer_2.IN0
+in3[1] => buffer_2.IN0
+sel[0] => buffer_1.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|two_bit_4to1_mux:comb_4
+in0[0] => buffer_1.IN0
+in0[1] => buffer_1.IN0
+in1[0] => buffer_1.IN0
+in1[1] => buffer_1.IN0
+in2[0] => buffer_2.IN0
+in2[1] => buffer_2.IN0
+in3[0] => buffer_2.IN0
+in3[1] => buffer_2.IN0
+sel[0] => buffer_1.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|two_bit_4to1_mux:comb_5
+in0[0] => buffer_1.IN0
+in0[1] => buffer_1.IN0
+in1[0] => buffer_1.IN0
+in1[1] => buffer_1.IN0
+in2[0] => buffer_2.IN0
+in2[1] => buffer_2.IN0
+in3[0] => buffer_2.IN0
+in3[1] => buffer_2.IN0
+sel[0] => buffer_1.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|two_bit_4to1_mux:comb_6
+in0[0] => buffer_1.IN0
+in0[1] => buffer_1.IN0
+in1[0] => buffer_1.IN0
+in1[1] => buffer_1.IN0
+in2[0] => buffer_2.IN0
+in2[1] => buffer_2.IN0
+in3[0] => buffer_2.IN0
+in3[1] => buffer_2.IN0
+sel[0] => buffer_1.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[0] => buffer_2.IN1
+sel[0] => buffer_1.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+sel[1] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|display:comb_7
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[1] => hex.IN1
+in[1] => hex.IN1
+in[1] => hex.IN1
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= <GND>
+hex[3] <= <GND>
+hex[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|display:comb_8
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[1] => hex.IN1
+in[1] => hex.IN1
+in[1] => hex.IN1
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= <GND>
+hex[3] <= <GND>
+hex[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|display:comb_9
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[1] => hex.IN1
+in[1] => hex.IN1
+in[1] => hex.IN1
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= <GND>
+hex[3] <= <GND>
+hex[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part5|display:comb_10
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[0] => hex.IN0
+in[1] => hex.IN1
+in[1] => hex.IN1
+in[1] => hex.IN1
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= <GND>
+hex[3] <= <GND>
+hex[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+
+

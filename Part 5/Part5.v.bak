@@ -1,0 +1,17 @@
+//
+// Verilog Lab Part 5
+// Neil Nie, Deerfield Academy
+// CS 603, Ben Bakker
+// (c) 2018, All Rights Reserved
+//
+
+module Part5(
+
+	SW,
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3
+
+);
+
