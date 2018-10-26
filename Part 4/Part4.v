@@ -18,12 +18,12 @@ wire [1:0] in;
 
 assign in = SW;
 
-assign HEX0[0] = in[1] & ~in[0];
-assign HEX0[1] = (~in[1] & ~in[0]) + (in[1] & ~in[0]);
-assign HEX0[2] = 0;
+assign HEX0[0] = ~in[1] & ~in[0];
+assign HEX0[1] = (~in[1] & in[0]);
+assign HEX0[2] = (~in[1] & in[0]) + (in[1] & ~in[0]);
 assign HEX0[3] = 0;
-assign HEX0[4] = (~in[1] & in[0]) + (in[1] & ~in[0]);
-assign HEX0[5] = ~in[1] & in[0];
-assign HEX0[6] = ~in[1] & ~in[0];
+assign HEX0[4] = 0;
+assign HEX0[5] = (~in[1] & ~in[0]) + (in[1] & ~in[0]);
+assign HEX0[6] = 0;
 
 endmodule

@@ -44,13 +44,13 @@ module display(
 input [1:0] in;
 output [6:0] hex;
 
-assign hex[0] = in[1] & ~in[0];
-assign hex[1] = (~in[1] & ~in[0]) + (in[1] & ~in[0]);
-assign hex[2] = 0;
-assign hex[3] = 0;
-assign hex[4] = (~in[1] & in[0]) + (in[1] & ~in[0]);
-assign hex[5] = ~in[1] & in[0];
-assign hex[6] = ~in[1] & ~in[0];
+assign hex[0] = (~in[1] & ~in[0]) + (in[1] & ~in[0]);
+assign hex[1] = (~in[1] & in[0]);
+assign hex[2] = (~in[1] & in[0]);
+assign hex[3] = (in[1] & ~in[0]);
+assign hex[4] = (in[1] & ~in[0]);
+assign hex[5] = (~in[1] & ~in[0]) + (in[1] & ~in[0]);
+assign hex[6] = (in[1] & ~in[0]) + (in[1] & in[0]);
 
 endmodule
 
@@ -64,7 +64,7 @@ module Part5(
 	HEX3
 );
 
-input [9:0] SW;
+input  [9:0] SW;
 output [0:6] HEX0;
 output [0:6] HEX1;
 output [0:6] HEX2;

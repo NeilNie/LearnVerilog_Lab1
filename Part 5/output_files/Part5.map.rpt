@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Part5
-Wed Oct 24 09:20:21 2018
+Thu Oct 25 15:09:36 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,13 +14,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Multiplexer Restructuring Statistics (Restructuring Performed)
-  9. Port Connectivity Checks: "display:comb_10"
- 10. Port Connectivity Checks: "display:comb_9"
- 11. Port Connectivity Checks: "display:comb_8"
- 12. Port Connectivity Checks: "display:comb_7"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "display:comb_7"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +43,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 24 09:20:21 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 25 15:09:36 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Part5                                       ;
 ; Top-level Entity Name              ; Part5                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 11                                          ;
-;     Total combinational functions  ; 11                                          ;
+; Total logic elements               ; 17                                          ;
+;     Total combinational functions  ; 17                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 38                                          ;
@@ -163,16 +160,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 11          ;
+; Estimated Total logic elements              ; 17          ;
 ;                                             ;             ;
-; Total combinational functions               ; 11          ;
+; Total combinational functions               ; 17          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 4           ;
+;     -- 4 input functions                    ; 10          ;
 ;     -- 3 input functions                    ; 7           ;
 ;     -- <=2 input functions                  ; 0           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 11          ;
+;     -- normal mode                          ; 17          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -183,23 +180,26 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[9]~input ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 78          ;
-; Average fan-out                             ; 0.90        ;
+; Maximum fan-out node                        ; SW[8]~input ;
+; Maximum fan-out                             ; 13          ;
+; Total fan-out                               ; 120         ;
+; Average fan-out                             ; 1.29        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; |Part5                     ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |Part5                 ; Part5       ; work         ;
-;    |display:comb_10|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_10 ; display     ; work         ;
-;    |display:comb_8|        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_8  ; display     ; work         ;
-;    |display:comb_9|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_9  ; display     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name      ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
+; |Part5                       ; 17 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |Part5                         ; Part5            ; work         ;
+;    |display:comb_10|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_10         ; display          ; work         ;
+;    |display:comb_8|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_8          ; display          ; work         ;
+;    |display:comb_9|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|display:comb_9          ; display          ; work         ;
+;    |two_bit_4to1_mux:comb_4| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|two_bit_4to1_mux:comb_4 ; two_bit_4to1_mux ; work         ;
+;    |two_bit_4to1_mux:comb_5| ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|two_bit_4to1_mux:comb_5 ; two_bit_4to1_mux ; work         ;
+;    |two_bit_4to1_mux:comb_6| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|two_bit_4to1_mux:comb_6 ; two_bit_4to1_mux ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -228,41 +228,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "display:comb_10"                                                                                                       ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; hex  ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "hex[6..1]" have no fanouts ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "display:comb_9"                                                                                                        ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; hex  ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "hex[6..1]" have no fanouts ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "display:comb_8"                                                                                                        ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; hex  ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "hex[6..1]" have no fanouts ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "display:comb_7"                                                                                                        ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; hex  ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "hex[6..1]" have no fanouts ;
-; hex  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display:comb_7"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; hex  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -271,14 +243,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 38                          ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
+; cycloneiii_lcell_comb ; 24                          ;
+;     normal            ; 24                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
 ;         3 data inputs ; 7                           ;
-;         4 data inputs ; 4                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.50                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,66 +270,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 24 09:19:33 2018
+    Info: Processing started: Thu Oct 25 15:09:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part5 -c Part5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
 Info (12021): Found 3 design units, including 3 entities, in source file part5.v
     Info (12023): Found entity 1: two_bit_4to1_mux File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 10
     Info (12023): Found entity 2: display File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 39
-    Info (12023): Found entity 3: Part5 File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 59
-Warning (10236): Verilog HDL Implicit Net warning at Part5.v(96): created implicit net for "HEXO" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 96
+    Info (12023): Found entity 3: Part5 File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at Part5.v(94): created implicit net for "HEXO" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 94
+Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(78): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 78
+Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(79): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 79
 Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(80): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 80
 Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(81): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 81
-Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(82): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 82
-Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(83): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 83
+Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(88): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 88
+Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(89): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 89
 Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(90): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 90
 Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(91): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 91
-Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(92): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 92
-Critical Warning (10846): Verilog HDL Instantiation warning at Part5.v(93): instance has no name File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 93
 Info (12127): Elaborating entity "Part5" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Part5.v(96): object "HEXO" assigned a value but never read File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 96
-Warning (10034): Output port "HEX0" at Part5.v(70) has no driver File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-Info (12128): Elaborating entity "two_bit_4to1_mux" for hierarchy "two_bit_4to1_mux:comb_3" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 80
-Info (12128): Elaborating entity "display" for hierarchy "display:comb_7" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 90
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(94): object "HEXO" assigned a value but never read File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 94
+Warning (10230): Verilog HDL assignment warning at Part5.v(94): truncated value with size 7 to match size of target (1) File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 94
+Warning (10034): Output port "HEX0" at Part5.v(68) has no driver File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+Info (12128): Elaborating entity "two_bit_4to1_mux" for hierarchy "two_bit_4to1_mux:comb_3" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 78
+Info (12128): Elaborating entity "display" for hierarchy "display:comb_7" File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 88
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 70
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 71
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 72
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 73
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/VerilogLab/Part 5/Part5.v Line: 68
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 11 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Wed Oct 24 09:20:21 2018
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 17 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Thu Oct 25 15:09:36 2018
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:31
 
 

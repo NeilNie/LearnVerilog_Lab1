@@ -12,7 +12,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[4]",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
@@ -20,15 +20,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[6]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[0]",
 					"strict" : false
 				}
 			]
