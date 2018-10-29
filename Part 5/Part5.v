@@ -65,25 +65,25 @@ module Part5(
 );
 
 input  [9:0] SW;
-output [0:6] HEX0;
-output [0:6] HEX1;
-output [0:6] HEX2;
-output [0:6] HEX3;
+output [6:0] HEX0;
+output [6:0] HEX1;
+output [6:0] HEX2;
+output [6:0] HEX3;
 
 wire [1:0] mux0_out;
 wire [1:0] mux1_out;
 wire [1:0] mux2_out;
 wire [1:0] mux3_out;
 
-two_bit_4to1_mux(SW[7:6], SW[5:4], SW[3:2], SW[1:0], SW[9:8], mux0_out);
-two_bit_4to1_mux(SW[1:0], SW[7:6], SW[5:4], SW[3:2], SW[9:8], mux1_out);
-two_bit_4to1_mux(SW[3:2], SW[1:0], SW[7:6], SW[5:4], SW[9:8], mux2_out);
-two_bit_4to1_mux(SW[5:4], SW[3:2], SW[1:0], SW[7:6], SW[9:8], mux3_out);
+two_bit_4to1_mux(SW[1:0], SW[3:2], SW[5:4], SW[7:6], SW[9:8], mux0_out);
+two_bit_4to1_mux(SW[3:2], SW[5:4], SW[7:6], SW[1:0], SW[9:8], mux1_out);
+two_bit_4to1_mux(SW[5:4], SW[7:6], SW[1:0], SW[3:2], SW[9:8], mux2_out);
+two_bit_4to1_mux(SW[7:6], SW[1:0], SW[3:2], SW[5:4], SW[9:8], mux3_out);
 
-wire [0:6] display_out0;
-wire [0:6] display_out1;
-wire [0:6] display_out2;
-wire [0:6] display_out3;
+wire [6:0] display_out0;
+wire [6:0] display_out1;
+wire [6:0] display_out2;
+wire [6:0] display_out3;
 
 display(mux0_out, display_out0);
 display(mux1_out, display_out1);
@@ -91,7 +91,7 @@ display(mux2_out, display_out2);
 display(mux3_out, display_out3);
 
 
-assign HEXO = display_out0;
+assign HEX0 = display_out0;
 assign HEX1 = display_out1;
 assign HEX2 = display_out2;
 assign HEX3 = display_out3;
