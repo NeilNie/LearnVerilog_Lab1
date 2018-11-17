@@ -1,4 +1,7 @@
+// 
 // Lab Part 3
+// Neil Nie (c) 2018
+// 
 
 module Part3(
 	
